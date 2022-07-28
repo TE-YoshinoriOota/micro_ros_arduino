@@ -45,6 +45,11 @@ pushd firmware/mcu_ws > /dev/null
     cp -R geometry2/tf2_msgs ros2/tf2_msgs
     rm -rf geometry2
 
+    # Checking out test branch for https://github.com/micro-ROS/micro_ros_arduino/issues/1090
+    pushd uros/micro_ros_utilities
+        git checkout feature/update_bounded
+    popd
+
     # Import user defined packages
     mkdir extra_packages
     pushd extra_packages > /dev/null
