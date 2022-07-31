@@ -12,6 +12,7 @@ extern "C"
   size_t arduino_transport_write(struct uxrCustomTransport * transport, uint8_t *buf, size_t len, uint8_t *errcode) __attribute__ ((weak));
   size_t arduino_transport_read(struct uxrCustomTransport * transport, uint8_t *buf, size_t len, int timeout, uint8_t *errcode) __attribute__ ((weak));
 
+#if !defined(POSIX_VERSION) && !defined(_POSIX_VERSION) 
   #define micro_rollover_useconds 4294967295
 
   int clock_gettime(clockid_t unused, struct timespec *tp)
@@ -30,6 +31,7 @@ extern "C"
 
     return 0;
   }
+#endif
 
   bool arduino_transport_open(struct uxrCustomTransport * transport)
   {
