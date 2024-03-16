@@ -1,5 +1,4 @@
-#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT)
-
+#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT) || defined(ARDUINO_WIO_TERMINAL) || defined(BOARD_WITH_ESP_AT)
 #include <Arduino.h>
 
 
@@ -9,6 +8,11 @@
 #elif defined(ARDUINO_NANO_RP2040_CONNECT)
 #include <SPI.h>
 #include <WiFiNINA.h>
+#elif defined(ARDUINO_WIO_TERMINAL)
+#include <rpcWiFi.h>
+#include <WiFiUdp.h>
+#elif defined(BOARD_WITH_ESP_AT)
+#include <WiFiEspAT.h>
 #endif
 
 #include <micro_ros_arduino.h>
@@ -54,7 +58,7 @@ extern "C"
       delay(1);
     }
 
-    size_t readed  = udp_client.read(buf, len);
+    int readed  = udp_client.read(buf, len);
 
     return (readed < 0) ? 0 : readed;
   }
