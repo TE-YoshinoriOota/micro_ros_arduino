@@ -1,8 +1,8 @@
-#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_NANO_RP2040_CONNECT) || defined(ARDUINO_WIO_TERMINAL)
+#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_GIGA) || defined(ARDUINO_NANO_RP2040_CONNECT) || defined(ARDUINO_WIO_TERMINAL) || defined(BOARD_WITH_ESP_AT) || defined(ARDUINO_UNOR4_WIFI)
 #include <Arduino.h>
 
 
-#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7)
+#if defined(ESP32) || defined(TARGET_PORTENTA_H7_M7) || defined(ARDUINO_GIGA)
 #include <WiFi.h>
 #include <WiFiUdp.h>
 #elif defined(ARDUINO_NANO_RP2040_CONNECT)
@@ -11,6 +11,10 @@
 #elif defined(ARDUINO_WIO_TERMINAL)
 #include <rpcWiFi.h>
 #include <WiFiUdp.h>
+#elif defined(BOARD_WITH_ESP_AT)
+#include <WiFiEspAT.h>
+#elif defined(ARDUINO_UNOR4_WIFI)
+#include <WiFiS3.h>
 #endif
 
 #include <micro_ros_arduino.h>

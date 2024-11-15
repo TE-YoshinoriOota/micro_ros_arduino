@@ -38,13 +38,20 @@ Supported boards are:
 
 Community contributed boards are:
 
-| Board                                                                                    | Min version | Contributor                                    | Details | .meta file               |
-| ---------------------------------------------------------------------------------------- | ----------- | ---------------------------------------------- | ------- | ------------------------ |
-| [Arduino Due](https://store.arduino.cc/arduino-due)                                      | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
-| [Arduino Zero](https://store.arduino.cc/arduino-zero)                                    | -           | [@lukicdarkoo](https://github.com/lukicdarkoo) |         | `colcon_verylowmem.meta` |
-| [Kakute F7](http://www.holybro.com/product/kakute-f7-aio-v1-5/)                          | -           | [@amfern](https://github.com/amfern)           |         | `colcon.meta`            |
-| [STM32-E407](https://www.olimex.com/Products/ARM/ST/STM32-E407/resources/STM32-E407.pdf) | -           | [@dominikn](https://github.com/dominikn)       |         | `colcon.meta`            |
-| [Wio Terminal](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/) | -           | [@maehara-keisuke](https://github.com/maehara-keisuke)       |         | `colcon.meta`            |
+| Board                                                                                    | Min version | Contributor                                            | Details                                                                   | .meta file               |
+| ---------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------ | ------------------------------------------------------------------------- | ------------------------ |
+| [Arduino Due](https://store.arduino.cc/arduino-due)                                      | -           | [@lukicdarkoo](https://github.com/lukicdarkoo)         |                                                                           | `colcon_verylowmem.meta` |
+| [Arduino Zero](https://store.arduino.cc/arduino-zero)                                    | -           | [@lukicdarkoo](https://github.com/lukicdarkoo)         |                                                                           | `colcon_verylowmem.meta` |
+| [Kakute F7](http://www.holybro.com/product/kakute-f7-aio-v1-5/)                          | -           | [@amfern](https://github.com/amfern)                   |                                                                           | `colcon.meta`            |
+| [STM32-E407](https://www.olimex.com/Products/ARM/ST/STM32-E407/resources/STM32-E407.pdf) | -           | [@dominikn](https://github.com/dominikn)               |                                                                           | `colcon.meta`            |
+| [Wio Terminal](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/)               | -           | [@maehara-keisuke](https://github.com/maehara-keisuke) |                                                                           | `colcon.meta`            |
+| [Raspberry Pi Pico](https://www.raspberrypi.com/documentation/microcontrollers/)         | -           | [@maehara-keisuke](https://github.com/maehara-keisuke) | with [ESP-AT](https://www.espressif.com/en/products/sdks/esp-at/overview) | `colcon_verylowmem.meta` |
+| [Seeed Studio XIAO SAMD21](https://wiki.seeedstudio.com/Seeeduino-XIAO/)                 | -           | [@maehara-keisuke](https://github.com/maehara-keisuke) | with [ESP-AT](https://www.espressif.com/en/products/sdks/esp-at/overview) | `colcon_verylowmem.meta` |
+| [Seeed Studio XIAO RP2040](https://wiki.seeedstudio.com/XIAO-RP2040/)                    | -           | [@maehara-keisuke](https://github.com/maehara-keisuke) | with [ESP-AT](https://www.espressif.com/en/products/sdks/esp-at/overview) | `colcon_verylowmem.meta` |
+| [Arduino Giga R1](https://store.arduino.cc/products/giga-r1-wifi)                        | -           | [@gbr1](https://github.com/gbr1)                       |                                                                           | `colcon.meta`            |
+| [Arduino UNO R4 WiFi](https://store.arduino.cc/products/uno-r4-wifi)                     | -           | [@gbr1](https://github.com/gbr1)                       |                                                                           | `colcon.meta`            |
+| [Arduino UNO R4 Minima](https://store.arduino.cc/products/uno-r4-minima)                 | -           | [@gbr1](https://github.com/gbr1)                       |                                                                           | `colcon.meta`            |
+
 
 You can find the available precompiled ROS 2 types for messages and services in [available_ros2_types](available_ros2_types).
 
