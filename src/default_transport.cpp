@@ -14,6 +14,7 @@ extern "C"
 
   #define micro_rollover_useconds 4294967295
 
+#if !defined(POSIX_VERSION) && !defined(_POSIX_VERSION) 
   int clock_gettime(clockid_t unused, struct timespec *tp)
   {
     (void)unused;
@@ -30,6 +31,7 @@ extern "C"
 
     return 0;
   }
+#endif
 
   bool arduino_transport_open(struct uxrCustomTransport * transport)
   {
